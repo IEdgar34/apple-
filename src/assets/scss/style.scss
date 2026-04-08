@@ -1,0 +1,60 @@
+@use "variables.scss" as *;
+@use "./blocks/header.scss";
+@use "./blocks/nav.scss";
+@use "./blocks/hero.scss";
+@use "./blocks/iphone16pro.scss";
+@use "./blocks/iphone16.scss";
+@use "./blocks/allproducts.scss";
+@use "./blocks/support.scss";
+@use "./blocks/footer.scss";
+.overflow {
+	overflow: hidden;
+}
+html {
+	scrollbar-gutter: stable;
+}
+.btn {
+	padding: 12px 22px;
+	border-radius: 25px;
+	text-align: center;
+	background-color: #{$color-primary-blue};
+	color: #{$color-primary-light};
+	text-decoration: none;
+	font-family: "SF Pro Text", sans-serif;
+	font-weight: 300;
+}
+
+.btn-light {
+	--bc: #{$color-primary-blue};
+	padding: 12px 22px;
+	border-radius: 25px;
+	text-align: center;
+	background-color: transparent;
+	border: 1px solid var(--bc);
+	color: #{$color-primary-blue};
+	text-decoration: none;
+	font-family: "SF Pro Text", sans-serif;
+	font-weight: 300;
+}
+/* .btn-light:focus-visible {
+	box-shadow: 3px 3px 3px 3px red !important;
+}
+.btn:focus-visible {
+	box-shadow: 3px 3px 3px 3px red !important;
+} */
+.title {
+	font-family: "SF Pro Display", sans-serif;
+	font-weight: 700;
+	text-align: center;
+}
+
+.descr {
+	font-family: "SF Pro Display regular", sans-serif;
+	font-weight: 300;
+	text-align: center;
+}
+@media (max-width: 830px) {
+	.btn-light,.btn {
+		padding: 10px 15px;
+	}
+}

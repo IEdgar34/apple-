@@ -1,0 +1,40 @@
+.nav-container {
+	max-width: 996px;
+	min-height: 44px;
+	margin: 0 auto;
+}
+
+.header {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	max-width: 2560px;
+	background-color: rgba(255, 255, 255, 0.8);
+	z-index: 1000;
+	margin: 0 auto;
+	&-icons {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 80px;
+		width: 100%;
+	}
+	&-icon__size {
+		display: block;
+		width: 35px;
+		height: 45px;
+	}
+	&-apple__icon {
+		width: 16px;
+		height: 16px;
+	}
+}
+@media (max-width: 830px) {
+	.header {
+		&-icons {
+			max-width: 144px;
+			justify-content: end;
+			gap: 10px;
+		}
+	}
+}

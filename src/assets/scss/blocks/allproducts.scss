@@ -1,0 +1,143 @@
+@use "../variables.scss" as *;
+
+.all-products {
+	width: 100%;
+	max-width: 2560px;
+	margin: 0 auto;
+	padding: 0 12px 12px 12px;
+	@media (min-width: 2560px) {
+		padding: 0;
+	}
+}
+
+.products-list {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 12px;
+	list-style-type: none;
+	&__item {
+		max-width: 100%;
+		width: 100%;
+		/* height: 580px; */
+		aspect-ratio: 4/2.6;
+		padding-top: 56px;
+		position: relative;
+		&-btn {
+			max-width: max-content;
+		}
+		&-btn-light {
+			background-color: #{$color-primary-light} !important;
+			border: none !important;
+			color: #{$color-primary-dark} !important;
+		}
+		picture {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: 9;
+			top: 0;
+			left: 0;
+			img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		&-descr-wrapper {
+			position: relative;
+			z-index: 10;
+		}
+		&-img {
+			display: block;
+			max-width: 430px;
+			width: 100%;
+			height: 67px;
+			margin: 0 auto;
+			padding-bottom: 10px;
+		}
+		&-title {
+			font-size: 38px;
+			color: #{$color-primary-dark};
+			padding-bottom: 17px;
+		}
+		&-title-light {
+			font-size: 38px;
+			color: #{$color-primary-light};
+			padding-bottom: 17px;
+		}
+		&-descr {
+			font-size: 21px;
+			color: #{$color-primary-dark};
+			padding-bottom: 17px;
+			max-width: 318px;
+			margin: 0 auto;
+		}
+		&-descr-light {
+			font-size: 21px;
+			color: #{$color-primary-light};
+			padding-bottom: 17px;
+			max-width: 333px;
+			margin: 0 auto;
+		}
+		&-dtn-wrapper {
+			display: flex;
+			justify-content: center;
+			gap: 14px;
+		}
+	}
+}
+.light-btn {
+	background-color: #{$color-primary-light} !important;
+	color: #{$color-primary-dark} !important;
+}
+
+@media (max-width: 830px) {
+	.all-products  {
+		padding: 0;
+	}
+	.products-list {
+		&__item {
+			padding-top: 40px;
+			height: 500px;
+			aspect-ratio: unset;
+			// aspect-ratio: 4/3;
+			&-btn {
+				font-size: 14px;
+				line-height: 11px;
+			}
+			&-btn-light {
+				font-size: 14px;
+				line-height: 11px;
+			}
+			
+			&-img {
+				max-width: 405px;
+				height: 45px;
+				padding-bottom: 4px;
+			}
+			&-title {
+				padding-bottom: 4px;
+			}
+			&-title-light {
+				font-size: 31px;
+				padding-bottom: 4px;
+			}
+			&-descr-light {
+				max-width: 308px;
+				font-size: 19px;
+				padding-bottom: 17px;
+			}
+			&-descr {
+				max-width: 308px;
+				font-size: 19px;
+				padding-bottom: 17px;
+			}
+		}
+	}
+}
+@media (max-width: 830px) {
+	.products-list {
+		grid-template-columns: 1fr;
+	}
+}

@@ -1,0 +1,95 @@
+/* Inter Bold */
+@font-face {
+	font-family: "Inter";
+	src: url("../fonts/Inter-Bold.otf") format("opentype");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* SF Pro Display Bold */
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("../fonts/SF-Pro-Display-Bold.otf") format("opentype");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "SF Pro Display regular";
+	src: url("../fonts/SFPRODISPLAYREGULAR.otf") format("opentype");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+/* SF Pro Regular (общий) */
+@font-face {
+	font-family: "SF Pro";
+	src: url("../fonts/SFPro-Regular.otf") format("opentype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* SF Pro Icons Regular */
+@font-face {
+	font-family: "sfproicons_regular";
+	src: url("../fonts/SFProIcons-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* SF Pro Text Bold */
+@font-face {
+	font-family: "SF Pro Text";
+	src: url("../fonts/SFProText-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* SF Pro Text Medium */
+@font-face {
+	font-family: "SF Pro Text";
+	src: url("../fonts/SFProText-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* SF Pro Text Regular */
+@font-face {
+	font-family: "SF Pro Text";
+	src: url("../fonts/SFProText-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* SF Pro Text Regular Italic */
+@font-face {
+	font-family: "SF Pro Text";
+	src: url("../fonts/SFProText-RegularItalic.ttf") format("truetype");
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+
+/* SF Pro Text Semibold */
+@font-face {
+	font-family: "SF Pro Text";
+	src: url("../fonts/SFProText-Semibold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* SF Pro Text Semibold Italic */
+@font-face {
+	font-family: "SF Pro Text";
+	src: url("../fonts/SFProText-SemiboldItalic.ttf") format("truetype");
+	font-weight: 600;
+	font-style: italic;
+	font-display: swap;
+}

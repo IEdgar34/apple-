@@ -1,0 +1,63 @@
+@use "../variables.scss" as *;
+.iphone-16-pro {
+	width: 100%;
+	max-width: 2560px;
+	height: 692px;
+	margin: 0 auto;
+	padding-top: 55px;
+	margin-bottom: 12px;
+	background-color: #{$color-dark};
+	background-image: url("../../image/iphone-16-pro.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	@media (min-width: 2000px) {
+		height: 850px;
+	}
+	&__title {
+		font-size: 54px;
+		text-align: center;
+		padding-bottom: 6px;
+		color: #{$color-primary-light};
+	}
+	&__description {
+		color: #{$color-primary-light};
+		font-size: 28px;
+		text-align: center;
+		padding-bottom: 19px;
+	}
+	&__btn-wrapper {
+		display: flex;
+		gap: 17px;
+		justify-content: center;
+	}
+}
+@media (max-width: 830px) {
+	.iphone-16-pro {
+		height: 500px;
+		background-image: url("../../image/iphone-16-pro-mob.jpg");
+		background-size: contain;
+		padding-top: 347px;
+		padding-bottom: 37px;
+		&__title {
+			font-size: 31px;
+			padding-bottom: 4px;
+			line-height: 18px;
+		}
+		&__description {
+			font-size: 19px;
+			max-width: 199px;
+			margin: 0 auto;
+			padding: 0 10px 19px 10px;
+			padding-bottom: 17px;
+			line-height: 18px;
+		}
+		&__btn {
+			line-height: 11px;
+			font-size: 14px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}

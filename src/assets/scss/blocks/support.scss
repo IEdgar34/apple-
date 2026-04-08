@@ -1,0 +1,46 @@
+@use "../variables.scss" as *;
+.footer-wrapper {
+	width: 100%;
+	max-width: 2560px;
+	margin: 0 auto;
+	margin-top: 42px;
+    padding-bottom: 20px;
+	padding-top: 18px;
+	background-color: #{$color-primary-grey};
+}
+
+.support {
+	width: 100%;
+	max-width: 980px;
+	margin: 0 auto;
+    &-desription {
+        padding-bottom: 11px;
+		padding-left: 10px;
+	}
+	&-desription-dot {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		list-style-type: none;
+		padding-bottom: 11px;
+        
+	}
+	&-detail {
+		font-family: "SF Pro Text", sans-serif;
+		font-size: 12px;
+		font-weight: 300;
+		color: rgba(0, 0, 0, 0.5);
+		line-height: 16px;
+		a{
+			color: #{$color-dark};
+		}
+	}
+	hr {
+		margin-bottom: 20px;
+	}
+}
+@media (max-width: 860px) {
+	.footer-wrapper {
+		padding: 0 10px;
+	}
+}
