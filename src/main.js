@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	const navList = document.querySelector(".nav-list-mob");
 	const wrapper = document.querySelector(".wrapper");
 	const ftContent = document.querySelectorAll(".ft-content");
-	const ftContentList = document.querySelector(".ft-content__list");
+	const ftContentList = document.querySelectorAll(".ft-content__list");
 	const ftContentBtn = document.querySelector(".ft-content-btn");
 
 	burgerBtn.addEventListener("click", () => {
@@ -20,11 +20,13 @@ window.addEventListener("DOMContentLoaded", () => {
 	});
 
 	ftContent.forEach((item) => {
-		item.addEventListener("click", (e) => {
+		item.addEventListener("pointerdown", (e) => {
 			let child = e.currentTarget.querySelector(".ft-content__list");
 			let ftContentBtn = e.currentTarget.querySelector(".ft-content-btn ");
+			//
             child.classList.toggle('open')
             ftContentBtn.classList.toggle('ft-content-btn_rotate')
+			//
 			if (child.classList.contains('open')) {
 				child.style = `
                 height: ${child.scrollHeight}px;
@@ -40,4 +42,11 @@ window.addEventListener("DOMContentLoaded", () => {
             }
 		});
 	});
+	ftContentList.forEach(item => {
+		item.addEventListener('transitionend',(e) => {
+			if(e.propertyName === 'height') {
+				item.style.height = 'auto'
+			}
+		})
+	})
 });
