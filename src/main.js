@@ -20,7 +20,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	});
 
 	ftContent.forEach((item) => {
-		item.addEventListener("pointerdown", (e) => {
+		item.addEventListener("pointerup", (e) => {
 			
 			if (e.button === 0 && !e.target.closest('.ft-content__list')) {
 				let child = e.currentTarget.querySelector(".ft-content__list");
