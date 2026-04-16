@@ -21,32 +21,34 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	ftContent.forEach((item) => {
 		item.addEventListener("pointerdown", (e) => {
-			let child = e.currentTarget.querySelector(".ft-content__list");
-			let ftContentBtn = e.currentTarget.querySelector(".ft-content-btn ");
-			//
-            child.classList.toggle('open')
-            ftContentBtn.classList.toggle('ft-content-btn_rotate')
-			//
-			if (child.classList.contains('open')) {
-				child.style = `
-                height: ${child.scrollHeight}px;
-                scale:1;
-                pointer-events: unset;
-                transition: height 0.3s ,scale 0.5s;
-                position:static;
-            `;
-			}else {
-                 child.style = `
-               
-            `
-            }
+			
+			if (e.button === 0 && !e.target.closest('.ft-content__list')) {
+				let child = e.currentTarget.querySelector(".ft-content__list");
+				let ftContentBtn = e.currentTarget.querySelector(".ft-content-btn ");
+				//
+				child.classList.toggle("open");
+				ftContentBtn.classList.toggle("ft-content-btn_rotate");
+				//
+				if (child.classList.contains("open")) {
+					child.style = `
+						height: ${child.scrollHeight}px;
+						scale:1;
+						/* pointer-events: unset; */
+						transition: height 0.3s ,scale 0.5s;
+						position:static;
+           		 	`;
+				} else {
+					child.style = ``;
+				}
+			}
+			
 		});
 	});
-	ftContentList.forEach(item => {
-		item.addEventListener('transitionend',(e) => {
-			if(e.propertyName === 'height') {
-				item.style.height = 'auto'
+	ftContentList.forEach((item) => {
+		item.addEventListener("transitionend", (e) => {
+			if (e.propertyName === "height") {
+				item.style.height = "auto";
 			}
-		})
-	})
+		});
+	});
 });

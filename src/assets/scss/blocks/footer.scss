@@ -130,7 +130,7 @@
 		&__list {
 			position: absolute;
 			scale: 0;
-			pointer-events: none;
+			/* pointer-events: none; */
 			height: 0;
 			transition:
 				height 0.3s,
